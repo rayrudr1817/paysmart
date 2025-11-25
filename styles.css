@@ -245,3 +245,146 @@ footer {
   transform: scale(1.08);
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
+
+.service {
+  background: linear-gradient(135deg, #0072ff, #00d4ff);
+  color: white;
+  padding: 22px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.35s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.service:hover {
+  background: linear-gradient(135deg, #3aa655, #5ddf7d);
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+.services-title {
+  text-align: center;
+  font-size: 56px;
+  font-weight: bold;
+  margin-top: auto;
+  margin-bottom: 40px; 
+  color: #003b8e;
+  letter-spacing: 1px;
+}
+
+
+.recharge-center {
+  width: fit-content;
+  margin: 80px auto;
+  text-align: center;
+  transform: scale(1.2);
+}
+
+/* Center form fields */
+.recharge-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+/* Input styling to match theme */
+.recharge-form input {
+  padding: 14px;
+  width: 260px;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+}
+
+.recharge-form button {
+  background: #0072ff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.recharge-form button:hover {
+  background: #3aa655;
+  transform: scale(1.05);
+}
+.contact-center {
+  width: fit-content;
+  margin: 80px auto;
+  text-align: center;
+  transform: scale(1.2);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 280px;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+  resize: none;
+}
+
+.contact-form button {
+  background: #0072ff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #3aa655;
+  transform: scale(1.08);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #3aa655;
+  outline: none;
+  box-shadow: 0 0 8px #3aa655;
+}
+
+
+.services-title {
+  text-align: center;
+  font-size: 45px;
+  margin-top: 40px;
+  margin-bottom: 35px;
+  font-weight: 700;
+  color: #003b8e;
+}
+
+.service {
+  display: block;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #0072ff, #00d4ff);
+  padding: 22px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.35s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.service:hover {
+  background: linear-gradient(135deg, #3aa655, #5ddf7d);
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
