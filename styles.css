@@ -12,7 +12,6 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-
 .logo { font-size: 26px; font-weight: bold; }
 
 nav a {
@@ -135,12 +134,12 @@ button {
   border-radius: 8px;
   cursor: pointer;
 }
-/* EXTRA SECTION */
+
 .extra-section {
     padding: 60px 80px;
 }
 
-.extra-section h2 {
+.extra-section h2 {  
     margin-bottom: 25px;
     font-size: 28px;
 }
@@ -188,4 +187,61 @@ footer {
   margin-top: 50px;
   font-size: 16px;
   font-weight: 600;
+}
+.item {
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: none;
+}
+
+.item:nth-child(1) { background: linear-gradient(135deg, #4facfe, #0072ff); }
+.item:nth-child(2) { background: linear-gradient(135deg, #4facfe, #0072ff); }
+.item:nth-child(3) { background: linear-gradient(135deg, #4facfe, #0072ff); }
+.item:nth-child(4) { background: linear-gradient(135deg, #4facfe, #0072ff); }
+.item:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.item {
+  background: #0072ff; 
+  color: white;
+  padding: 12px 18px;
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.item:hover {
+  background: #3aa655; 
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.card {
+  background: linear-gradient(135deg, #0072ff, #00d4ff);
+  color: white;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.35s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card:hover {
+  background: linear-gradient(135deg, #3aa655, #5ddf7d);
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
