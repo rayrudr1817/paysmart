@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker - PaySmart</title>
+  <link rel="stylesheet" href="expense.css">
+</head>
+<body>
+
+<header>
+  <div class="logo"><a href="index.html"style="color: white;">PaySmart</a></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+
+    <a href="services.html" class="active">Services</a>
+    <a href="recharge.html">Recharge</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="expense-section">
+  <h2>Expense Tracker</h2>
+  <p>Keep track of your daily expenses and manage your budget smartly.</p>
+
+  <div class="tracker-container">
+    <div class="expense-banner">
+  <img src="https://i.postimg.cc/rFSXzf38/Chat-GPT-Image-Dec-5-2025-03-42-43-PM.png" alt="Spend Summary Banner">
+</div>
+
+    <form class="expense-form">
+      <input type="text" placeholder="Expense Name" required>
+      <input type="number" placeholder="Amount (₹)" required>
+      <select required>
+        <option value="">Category</option>
+        <option value="food">Food</option>
+        <option value="travel">Travel</option>
+        <option value="shopping">Shopping</option>
+        <option value="bills">Bills</option>
+        <option value="other">Other</option>
+      </select>
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <div class="expense-list">
+      <h3>Recent Expenses</h3>
+      <ul>
+        <li>Lunch - ₹150 - Food</li>
+        <li>Movie Ticket - ₹300 - Entertainment</li>
+        <li>Electricity Bill - ₹1200 - Bills</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

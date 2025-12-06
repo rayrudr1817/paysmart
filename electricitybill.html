@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PaySmart - Electricity Bill</title>
+  <link rel="stylesheet" href="electricitybill.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <a href="index.html" style="text-decoration:none; color:white;">PaySmart</a>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a class="active" href="recharge.html">Recharge</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <section class="bill-card">
+    <h2>Electricity Bill Payment</h2>
+    
+    <label>State</label>
+    <select>
+      <option>Select Your State</option>
+      <option>Maharashtra</option>
+      <option>Delhi</option>
+      <option>Uttar Pradesh</option>
+      <option>Karnataka</option>
+    </select>
+
+    <label>Electricity Board</label>
+    <select>
+      <option>Select Board</option>
+      <option>Adani Electricity</option>
+      <option>Tata Power</option>
+      <option>BSES Rajdhani</option>
+      <option>UPPCL</option>
+    </select>
+
+    <label>Consumer Number</label>
+    <input type="text" placeholder="Enter Consumer Number">
+
+    <label>Bill Amount</label>
+    <input type="number" placeholder="₹0">
+
+    <button class="pay-btn">Pay Bill</button>
+  </section>
+
+  <section class="offers">
+    <h3>Electricity Offers ⚡</h3>
+
+    <div class="offer-box">
+      <img src="https://i.postimg.cc/KcfpWC6B/Untitled-design-(5).png" alt="cashback">
+      <div>
+        <h4>Flat ₹75 Cashback</h4>
+        <p>Valid for first electricity bill payment.</p>
+      </div>
+    </div>
+
+    <div class="offer-box">
+      <img src="https://i.postimg.cc/Bn8t195s/Untitled-design-(12).png" alt="discount">
+      <div>
+        <h4>5% Instant Discount</h4>
+        <p>Pay using PaySmart Wallet.</p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+
+</body>
+</html>

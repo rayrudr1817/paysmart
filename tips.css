@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6ff;
+}
+
+header {
+  background: #0d47ff;
+  padding: 15px 40px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo { 
+  font-size: 26px; 
+  font-weight: bold; 
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a.active {
+  border-bottom: 2px solid white;
+}
+
+.finance-section {
+    padding: 40px 60px;
+}
+
+.finance-section h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.tip-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 6px solid #0072ff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.tip-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #0072ff;
+}
+
+.tip-card p {
+    font-size: 15px;
+    color: #333;
+}

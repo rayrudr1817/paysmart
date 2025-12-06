@@ -1,36 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>PaySmart - Contact</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<title>PaySmart - Contact Us</title>
+<link rel="stylesheet" href="contact.css">
 </head>
 <body>
 
 <header>
-  <div class="logo">PaySmart</div>
+  <div class="logo"><a href="index.html">PaySmart</a></div>
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
     <a href="recharge.html">Recharge</a>
-    <a class="active" href="contact.html">Contact</a>
+    <a href="contact.html" class="active">Contact</a>
   </nav>
 </header>
-<section class="contact-center">
-  <h1>Contact Us</h1>
 
-  <form class="contact-form">
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <textarea placeholder="Your Message"></textarea>
-    <button>Send Message</button>
-  </form>
+<section class="contact-hero">
+  <div class="contact-text">
+    <h1>Contact PaySmart</h1>
+    <p>Have questions or need support? Reach out to our team anytime and we'll get back to you promptly.</p>
+    <p>Fill out the form or use the contact details below to connect with us.</p>
+  </div>
+  <div class="contact-form">
+    <h2>Send a Message</h2>
+    <form action="#" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your Name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Your Email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="6" placeholder="Type your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
 </section>
 
 <footer>
-    © 2025 PaySmart. All rights reserved.
+  © 2025 PaySmart. All Rights Reserved
 </footer>
-
 
 </body>
 </html>

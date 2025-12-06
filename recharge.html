@@ -17,18 +17,47 @@
   </nav>
 </header>
 
-<section class="recharge-center">
-  <h1>Recharge</h1>
+<section class="rech-container">
 
-  <form class="recharge-form">
-    <input type="text" placeholder="Enter Mobile Number">
-    <input type="text" placeholder="Enter Amount">
-    <button>Recharge Now</button>
-  </form>
+  <div class="rech-card">
+
+    <h2>Mobile Recharge</h2>
+
+    <form class="rech-form">
+
+      <div class="number-row">
+        <input list="codes" class="code" placeholder="+91">
+
+        <datalist id="codes">
+          <option value="+91 India">
+          <option value="+1 USA">
+          <option value="+44 UK">
+          <option value="+61 Australia">
+          <option value="+971 UAE">
+        </datalist>
+
+        <input type="text" class="mobile" placeholder="Mobile Number">
+      </div>
+
+      <input type="text" class="amount" placeholder="Enter Amount">
+
+      <label class="rech-btn">
+        <input type="checkbox" id="tick">
+        <span>Recharge Now</span>
+      </label>
+
+      <div class="success-box">
+        ✔ Recharge Successful
+      </div>
+
+    </form>
+
+  </div>
+
 </section>
 
 <footer>
-    © 2025 PaySmart. All rights reserved.
+  © 2025 PaySmart. All rights reserved.
 </footer>
 
 </body>

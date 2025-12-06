@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PaySmart - Card Payment</title>
+<link rel="stylesheet" href="cardpayment.css">
+</head>
+<body>
+
+<header>
+  <div class="logo"><a href="index.html"style="color: white;">PaySmart</a></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="recharge.html">Recharge</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="payment-hero">
+  <div class="card-container">
+    <div class="credit-card">
+      <div class="card-chip"></div>
+      <div class="card-number">XXXX XXXX XXXX XXXX</div>
+      <div class="card-holder">
+        <span>Card Holder</span>
+        <span>Expiry</span>
+      </div>
+      <div class="card-holder-info">
+        <span>FULL NAME</span>
+        <span>MM/YY</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="payment-form-section">
+    <div class="account-info">
+      <h3>Pay via Card or PaySmart Account</h3>
+      <p>Account No: <strong>1234 5678 9012 3456</strong></p>
+      <p>Bank: PaySmart Bank</p>
+    </div>
+
+    <input type="checkbox" id="pay-success" class="success-checkbox">
+
+    <div class="payment-form">
+      <h2>Pay with Card</h2>
+      <form action="#">
+        <div class="input-group">
+          <input type="text" placeholder=" " required>
+          <label>Card Number</label>
+        </div>
+        <div class="input-group">
+          <input type="text" placeholder=" " required>
+          <label>Card Holder</label>
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <input type="month" placeholder=" " required>
+            <label>Expiry</label>
+          </div>
+          <div class="input-group">
+            <input type="password" placeholder=" " required>
+            <label>CVV</label>
+          </div>
+        </div>
+        <div class="input-group">
+          <input type="number" placeholder=" " required>
+          <label>Amount</label>
+        </div>
+        <label for="pay-success" class="pay-btn">Pay Now</label>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="success-popup">
+  <div class="checkmark"></div>
+  <p>Payment Successful!</p>
+</div>
+
+<section class="offers-section">
+  <h2>Special Offers</h2>
+  <div class="offer-card">
+    <img src="https://via.placeholder.com/200x120.png?text=Offer+1" alt="Offer 1">
+    <h3>Cashback 10%</h3>
+    <p>Get instant 10% cashback on your first payment via PaySmart Card.</p>
+  </div>
+  <div class="offer-card">
+    <img src="https://via.placeholder.com/200x120.png?text=Offer+2" alt="Offer 2">
+    <h3>Reward Points</h3>
+    <p>Earn reward points on every transaction and redeem exciting gifts.</p>
+  </div>
+  <div class="offer-card">
+    <img src="https://via.placeholder.com/200x120.png?text=Offer+3" alt="Offer 3">
+    <h3>Refer & Earn</h3>
+    <p>Refer your friends and get bonus credits on successful referrals.</p>
+  </div>
+</section>
+
+<footer>
+  © 2025 PaySmart. All Rights Reserved
+</footer>
+
+</body>
+</html>

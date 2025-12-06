@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f4f6ff;
+  color: #0d47ff;
+}
+header {
+  background: #0d47ff;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header .logo a {
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+nav a {
+  color: #dbe6ff;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav a.active, nav a:hover {
+  color: white;
+  border-bottom: 2px solid white;
+}
+.about-hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 50px;
+  background: white;
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  gap: 30px;
+}
+.about-text {
+  flex: 1 1 500px;
+  min-width: 300px;
+}
+.about-text h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0d47ff;
+}
+.about-text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.about-img {
+  flex: 1 1 400px;
+  text-align: center;
+}
+.about-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.about-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+.feature-card {
+  background: white;
+  width: 300px;
+  padding: 30px 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 14px 32px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.2);
+}
+.feature-card h2 {
+  color: #003b8e;
+  margin-bottom: 15px;
+}
+.feature-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #003b8e;
+  color: white;
+  margin-top: 60px;
+  font-weight: 600;
+}
+@media screen and (max-width: 900px) {
+  .about-hero {
+    flex-direction: column-reverse;
+    padding: 40px 20px;
+  }
+  .about-text, .about-img {
+    text-align: center;
+  }
+  .about-text h1 {
+    font-size: 28px;
+  }
+  .about-img img {
+    max-width: 300px;
+  }
+  .about-features {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

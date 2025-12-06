@@ -12,7 +12,11 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-.logo { font-size: 26px; font-weight: bold; }
+
+.logo { 
+  font-size: 26px; 
+  font-weight: bold; 
+}
 
 nav a {
   color: white;
@@ -29,8 +33,10 @@ nav a.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 120px;
+  padding: 60px 80px;
   gap: 40px;
+  width: 100%;
+  box-sizing: border-box;
   min-height: 70vh;
 }
 
@@ -51,19 +57,6 @@ nav a.active {
   max-width: 450px;
   border-radius: 15px;
 }
-.hero {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px 80px;
-  gap: 40px;
-}
-
 
 .quick-box {
   display: flex;
@@ -72,142 +65,6 @@ nav a.active {
   margin: 20px 0;
 }
 
-.item {
-  background: white;
-  padding: 12px 18px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px #ccc;
-  font-size: 15px;
-}
-
-.features {
-  display: flex;
-  gap: 15px;
-  margin-top: 25px;
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 30%;
-  text-align: center;
-  box-shadow: 0 2px 6px #ccc;
-}
-
-.page {
-  padding: 40px;
-}
-
-.services-box {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.service {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px #ccc;
-  text-align: center;
-  padding: 15px;
-  margin: 10px;
-}
-
-.recharge-form input,
-.contact-form input,
-.contact-form textarea {
-  width: 300px;
-  padding: 12px;
-  display: block;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: 1px solid #bbb;
-}
-
-button {
-  background: #0d47ff;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.extra-section {
-    padding: 60px 80px;
-}
-
-.extra-section h2 {  
-    margin-bottom: 25px;
-    font-size: 28px;
-}
-
-.extra-cards {
-    display: flex;
-    gap: 25px;
-}
-
-.extra-card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 2px 7px rgba(0,0,0,0.15);
-    width: 30%;
-}
-
-.extra-card h3 {
-    margin-bottom: 10px;
-}
-
-.extra-card p {
-    font-size: 14px;
-    margin-bottom: 15px;
-    color: #555;
-}
-
-.extra-card button {
-    background: #0066ff;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-footer {
-  background: #003b8e;
-  color: white;
-  text-align: center;
-  position: fixed;
-  bottom: 20px;
-  left: 0;
-  width: 100%;
-  padding: 18px 0;
-  margin-top: 50px;
-  font-size: 16px;
-  font-weight: 600;
-}
-.item {
-  padding: 12px 18px;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border: none;
-}
-
-.item:nth-child(1) { background: linear-gradient(135deg, #4facfe, #0072ff); }
-.item:nth-child(2) { background: linear-gradient(135deg, #4facfe, #0072ff); }
-.item:nth-child(3) { background: linear-gradient(135deg, #4facfe, #0072ff); }
-.item:nth-child(4) { background: linear-gradient(135deg, #4facfe, #0072ff); }
-.item:hover {
-  transform: scale(1.06);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
 .item {
   background: #0072ff; 
   color: white;
@@ -228,6 +85,12 @@ footer {
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
+.features {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
 .card {
   background: linear-gradient(135deg, #0072ff, #00d4ff);
   color: white;
@@ -246,13 +109,24 @@ footer {
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
+.page {
+  padding: 40px;
+}
+
+.services-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
 .service {
-  background: linear-gradient(135deg, #0072ff, #00d4ff);
+  display: block;
+  text-decoration: none;
   color: white;
+  background: linear-gradient(135deg, #0072ff, #00d4ff);
   padding: 22px;
   border-radius: 12px;
   text-align: center;
-  font-weight: 600;
   cursor: pointer;
   transition: 0.35s ease;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -263,16 +137,70 @@ footer {
   transform: scale(1.08);
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
+
 .services-title {
   text-align: center;
-  font-size: 56px;
-  font-weight: bold;
-  margin-top: auto;
-  margin-bottom: 40px; 
+  font-size: 45px;
+  margin-top: 40px;
+  margin-bottom: 35px;
+  font-weight: 700;
   color: #003b8e;
-  letter-spacing: 1px;
 }
 
+.extra-section {
+  padding: 60px 80px;
+}
+
+.extra-section h2 {  
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.extra-cards {
+  display: flex;
+  gap: 25px;
+}
+
+.extra-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 7px rgba(0,0,0,0.15);
+  width: 30%;
+}
+
+.extra-card h3 {
+  margin-bottom: 10px;
+}
+
+.extra-card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.extra-card button {
+  background: #0066ff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+footer {
+  background: #003b8e;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  padding: 18px 0;
+  margin-top: 50px;
+  font-size: 16px;
+  font-weight: 600;
+}
 
 .recharge-center {
   width: fit-content;
@@ -281,7 +209,6 @@ footer {
   transform: scale(1.2);
 }
 
-/* Center form fields */
 .recharge-form {
   display: flex;
   flex-direction: column;
@@ -289,7 +216,27 @@ footer {
   align-items: center;
 }
 
-/* Input styling to match theme */
+.phone-box {
+  display: flex;
+  gap: 8px;
+}
+
+.phone-box .code {
+  width: 110px;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+}
+
+.phone-box .mobile {
+  width: 150px;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+}
+
 .recharge-form input {
   padding: 14px;
   width: 260px;
@@ -313,6 +260,36 @@ footer {
   background: #3aa655;
   transform: scale(1.05);
 }
+
+.success-btn {
+  position: relative;
+}
+
+.success-popup {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00c853;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  opacity: 0;
+  pointer-events: none;
+  animation: none;
+}
+
+.success-btn:active .success-popup {
+  animation: pop 5s ease forwards;
+}
+
+@keyframes pop {
+  0% { opacity: 0; transform: translate(-50%, 20px); }
+  50% { opacity: 1; transform: translate(-50%, -10px); }
+  100% { opacity: 0; transform: translate(-50%, -30px); }
+}
+
 .contact-center {
   width: fit-content;
   margin: 80px auto;
@@ -360,31 +337,211 @@ footer {
   box-shadow: 0 0 8px #3aa655;
 }
 
-
-.services-title {
-  text-align: center;
-  font-size: 45px;
-  margin-top: 40px;
-  margin-bottom: 35px;
-  font-weight: 700;
-  color: #003b8e;
+.page-box {
+  padding: 40px;
 }
 
-.service {
+.page-box h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.page-sub {
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+
+.wallet-container {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+}
+
+.wallet-left {
+  width: 65%;
+}
+
+.wallet-left h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.wallet-sub {
+  opacity: 0.7;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.wallet-form {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 80%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.wallet-form label {
   display: block;
-  text-decoration: none;
-  color: white;
-  background: linear-gradient(135deg, #0072ff, #00d4ff);
-  padding: 22px;
-  border-radius: 12px;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.35s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-top: 12px;
+  font-weight: 600;
 }
 
-.service:hover {
-  background: linear-gradient(135deg, #3aa655, #5ddf7d);
-  transform: scale(1.08);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+.wallet-form input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+}
+
+.wallet-form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #0d47ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.wallet-form button:hover {
+  background: #003ccc;
+}
+
+.wallet-features {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.feature-box {
+  background: #eef1ff;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 14px;
+  flex: 1;
+  text-align: center;
+}
+
+.wallet-right {
+  width: 35%;
+}
+
+.wallet-right img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.info-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.info-card ul {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* MAIN WHITE + BLUE THEME */
+.rech-container {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  background: #f4f6ff;
+}
+
+/* Card Box */
+.rech-card {
+  background: white;
+  width: 420px;
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.rech-card h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0d47ff;
+  margin-bottom: 25px;
+}
+
+/* Input Styling */
+.rech-form input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1.7px solid #b7c5ff;
+  outline: none;
+  margin-bottom: 18px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.rech-form input:focus {
+  border-color: #0d47ff;
+  box-shadow: 0 0 5px #d6e1ff;
+}
+
+/* Row */
+.number-row {
+  display: flex;
+  gap: 10px;
+}
+
+.code {
+  width: 90px;
+}
+
+/* Button */
+.rech-btn {
+  display: block;
+  cursor: pointer;
+}
+
+.rech-btn span {
+  display: block;
+  padding: 14px;
+  background: #0d47ff;
+  color: white;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(13,71,255,0.35);
+  transition: 0.25s ease;
+}
+
+.rech-btn span:hover {
+  background: #0035d4;
+  transform: translateY(-2px);
+}
+
+/* Hide checkbox */
+#tick {
+  display: none;
+}
+
+/* SUCCESS BOX */
+.success-box {
+  opacity: 0;
+  padding: 12px;
+  background: #dfffe0;
+  border: 2px solid #00b718;
+  color: #00840d;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: 0.35s ease;
+}
+
+/* Show success when tick is checked */
+#tick:checked ~ .success-box {
+  opacity: 1;
+  transform: translateY(5px);
 }

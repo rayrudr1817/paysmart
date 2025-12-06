@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PaySmart - UPI Payment</title>
+<link rel="stylesheet" href="upi.css">
+</head>
+<body>
+
+<header>
+  <div class="logo"><a href="index.html" style="color: white;">PaySmart</a></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="recharge.html">Recharge</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Fast & Secure UPI Payments</h1>
+    <p>Send money instantly using your UPI ID or by scanning a QR code. Safe, reliable, and seamless — just like your PaySmart wallet.</p>
+  </div>
+  <div class="hero-img">
+    <img src="https://i.postimg.cc/x8WcT6kY/Untitled-design-(9).png" alt="UPI Payment Illustration">
+  </div>
+</section>
+
+<section class="payment-cards">
+
+  <div class="upi-balance-card">
+    <h3>💰 Wallet Balance</h3>
+    <p id="upiBalance" class="upi-balance-amount">₹0</p>
+    <p id="upiMsg" class="upi-msg"></p>
+    <a href="walletservice.html" class="add-balance-btn">➕ Add Balance</a>
+  </div>
+
+  <div class="card card-uid">
+    <h2>Pay via UPI ID</h2>
+    <form action="#success" method="get">
+      <label>UPI ID</label>
+      <input type="text" placeholder="example@upi" required>
+      <label>Amount</label>
+      <input type="number" placeholder="₹ Enter Amount" required class="upiAmount">
+      <button type="submit">Pay Now</button>
+    </form>
+  </div>
+
+  <div class="card card-qr">
+    <h2>Scan QR to Pay</h2>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=paysmart-upi" alt="QR Code" class="qr-code">
+    <p>Open your UPI app and scan the code to transfer money.</p>
+    <form action="#success" method="get">
+      <label>Amount</label>
+      <input type="number" placeholder="₹ Enter Amount" required class="upiAmount">
+      <button type="submit">Pay Now</button>
+    </form>
+  </div>
+
+</section>
+
+<div id="success" class="success-popup">
+  <div class="checkmark"></div>
+  <p>Payment Successful!</p>
+</div>
+
+<footer>
+  © 2025 PaySmart. All Rights Reserved
+</footer>
+<script>
+  let balance = Number(localStorage.getItem("walletBalance")) || 0;
+  document.getElementById("upiBalance").textContent = "₹" + balance;
+
+  const msg = document.getElementById("upiMsg");
+  const successPopup = document.getElementById("success");
+
+  if (balance <= 0) {
+    msg.innerHTML = "❌ Low Balance — <a href='walletservice.html' style='color:#003bff;text-decoration:underline;'>Add Balance</a>";
+  }
+
+  function handleUPIPayment(amountInput, form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault(); // prevent page reload
+      let amount = Number(amountInput.value);
+
+      if (amount > balance) {
+        msg.innerHTML = "❌ Not enough balance — <a href='walletservice.html' style='color:#003bff;text-decoration:underline;'>Add Balance</a>";
+        msg.style.color = "red";
+        return;
+      }
+
+      balance -= amount;
+      localStorage.setItem("walletBalance", balance);
+      document.getElementById("upiBalance").textContent = "₹" + balance;
+
+      msg.textContent = "✔ Payment Successful!";
+      msg.style.color = "green";
+
+      successPopup.style.display = "block";
+
+      setTimeout(() => {
+        successPopup.style.display = "none";
+      }, 2000);
+    });
+  }
+
+  handleUPIPayment(
+    document.querySelector(".card-uid .upiAmount"),
+    document.querySelector(".card-uid form")
+  );
+
+  handleUPIPayment(
+    document.querySelector(".card-qr .upiAmount"),
+    document.querySelector(".card-qr form")
+  );
+</script>
+
+
+</body>
+</html>

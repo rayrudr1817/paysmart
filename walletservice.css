@@ -1,0 +1,289 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6ff;
+  color: #333;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  margin: 0 0 10px 0;
+}
+.wallet-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 60px;
+  gap: 20px;
+}
+
+.wallet-left {
+  flex: 1 1 60%;
+}
+
+.wallet-sub {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.wallet-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.wallet-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.wallet-form button {
+  padding: 12px 20px;
+  background: #0d47ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wallet-form button:hover {
+  background: #0b39d6;
+}
+
+.wallet-features {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.feature-box {
+  background: #e3f0ff;
+  padding: 10px;
+  border-radius: 5px;
+  flex: 1;
+  text-align: center;
+}
+
+.wallet-right {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch;
+}
+
+
+.wallet-right img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.info-card {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  
+}
+
+.info-card ul {
+  padding-left: 20px;      
+  margin: 0;   }
+
+
+
+.info-card ul {
+  padding-left: 20px;
+}
+.features-section {
+  padding: 40px 60px;
+  background: #f0f4ff;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.feature-card img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.secure-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0d47ff;
+  color: white;
+  padding: 30px 60px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.secure-banner img {
+  max-width: 250px;
+  border-radius: 10px;
+}
+
+.offers-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  gap: 100px;
+  padding: 40px 60px;
+}
+
+.offers-scroll {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.offer-card {
+  flex: 0 0 auto;
+  border-radius: 10px;
+  width: 200px;
+  height: 320px;
+  object-fit: cover;
+}
+
+.reviews-section {
+  padding: 40px 60px;
+  background: #f0f4ff;
+}
+
+.review-box {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.review-box span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #0d47ff;
+}
+
+header {
+  background: #0d47ff;
+  padding: 15px 40px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+
+.logo { 
+  font-size: 26px; 
+  font-weight: bold; 
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  position: sticky;
+  top: 0px;
+}
+
+nav a.active {
+  border-bottom: 2px solid white;
+}
+.balance-card {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.balance-card h3 {
+  margin-bottom: 10px;
+  color: #0d47ff;
+}
+
+.balance-card p {
+  font-size: 32px;
+  font-weight: bold;
+  color: #111;
+}
+.balance-card {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+}
+
+.info-card {
+  width: 100%;
+}
+
+.balance-card,
+.info-card {
+  width: 100%;
+  max-width: 320px;   /* THIS fixes the huge size */
+  margin: 0 auto;
+}
+.wallet-right {
+  padding-top: 20px;
+}
+.wallet-right {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.balance-card,
+.info-card {
+  background: #ffffff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+}
+
+.info-card h3 {
+  margin-bottom: 10px;
+}
+.offers-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;   /* KEY FIX */
+}
+
+.offer-right-image {
+  width: 40%;
+  height: auto;              /* you can change this freely */
+  border-radius: 14px;
+  object-fit: cover;
+}

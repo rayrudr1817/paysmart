@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PaySmart - Wallet Service</title>
+  <link rel="stylesheet" href="walletservice.css">
+</head>
+<body>
+<header>
+  <div class="logo"><a href="index.html" style="color: white;;">PaySmart</a></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="recharge.html">Recharge</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<section class="wallet-container">
+  <div class="wallet-left">
+    <h1> Wallet Service</h1>
+    <p class="wallet-sub">Add money, manage funds, and enjoy instant transactions.</p>
+
+    <div class="wallet-form">
+      <label>Wallet ID</label>
+      <input type="text" placeholder="Enter your Wallet ID">
+
+      <label>Add Money</label>
+      <input type="number" placeholder="Enter amount">
+
+      <button>Add Money</button>
+    </div>
+
+    <div class="wallet-features">
+      <div class="feature-box"> Instant Add Money</div>
+      <div class="feature-box"> Secure Wallet</div>
+      <div class="feature-box"> Real-time Balance Update</div>
+    </div>
+  </div>
+
+  <div class="wallet-right">
+     <div class="balance-card">
+       <h3>Wallet Balance</h3>
+       <p id="walletBalance">₹0</p>
+     </div>
+
+    <div class="info-card">
+      <h3 style="text-align: left;">Why Use PaySmart Wallet?</h3>
+      <ul style="text-align: left;">
+        <li>Fastest load time</li>
+        <li>Zero convenience fee</li>
+        <li>UPI & Card supported</li>
+        <li>Guaranteed secure transactions</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="features-section">
+  <h2>More Ways to Use Your Wallet</h2>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <img src=https://i.postimg.cc/0jxcb0Ls/Untitled-design-(15).png" alt="Scan & Pay">
+      <h3>Scan & Pay</h3>
+      <p>Make fast QR payments at shops, cafes, and local stores.</p>
+    </div>
+
+    <div class="feature-card">
+      <img src="https://i.postimg.cc/fy415d1M/Untitled-design-(14).png" alt="Bill Payments">
+      <h3>Bill Payments</h3>
+      <p>Pay electricity, water, DTH, and broadband bills instantly.</p>
+    </div>
+
+    <div class="feature-card">
+      <img src="https://i.postimg.cc/brHwpqjB/Untitled-design-(10).png" alt="Recharge">
+      <h3>Mobile Recharge</h3>
+      <p>Prepaid & postpaid mobile recharge with amazing cashback offers.</p>
+    </div>
+  </div>
+</section>
+
+<section class="secure-banner">
+  <div class="secure-text">
+    <h2> 100% Secure Transactions</h2>
+    <p>Your wallet is protected with multi-layer encryption and fraud detection.</p>
+  </div>
+  <img src="https://via.placeholder.com/250x150?text=Secure" class="secure-img">
+</section>
+
+<section class="offers-section">
+  <div class="offers-left">
+    <h2>Exclusive Offers & Cashback</h2>
+    <div class="offers-scroll">
+      <img src="https://i.postimg.cc/c4LB2CWM/Untitled-design-(16).png" class="offer-card">
+      <img src="https://i.postimg.cc/ydKFPYn0/Untitled-design-(17).png" class="offer-card">
+      <img src="https://i.postimg.cc/NfFRbn7c/Untitled-design-(18).png" class="offer-card">
+    </div>
+  </div>
+  <img src="https://i.postimg.cc/7ZYsDXkD/Chat-GPT-Image-Dec-5-2025-03-50-16-PM.png" class="offer-right-image">
+
+</section>
+
+
+
+<section class="reviews-section">
+  <h2>What Users Say</h2>
+
+  <div class="review-box">
+    <p>"The fastest wallet app I've used. Adding money takes less than 5 seconds!”</p>
+    <span>- Aayush Sharma</span>
+  </div>
+
+  <div class="review-box">
+    <p>"Very secure and convenient. I use it for all my daily payments."</p>
+    <span>- Radhika Mehta</span>
+  </div>
+
+</section>
+<script>
+  let balance = Number(localStorage.getItem("walletBalance")) || 0;
+
+  const addBtn = document.querySelector(".wallet-form button");
+  const amountInput = document.querySelector('.wallet-form input[type="number"]');
+  const balanceDisplay = document.getElementById("walletBalance");
+
+  balanceDisplay.textContent = "₹" + balance;
+
+  addBtn.addEventListener("click", () => {
+    let amount = Number(amountInput.value);
+
+    if (!amount || amount <= 0) {
+      alert("Enter a valid amount");
+      return;
+    }
+
+    balance += amount;
+    localStorage.setItem("walletBalance", balance); // Save balance
+    balanceDisplay.textContent = "₹" + balance;
+    amountInput.value = "";
+  });
+  
+</script>
+
+</body>
+</html>

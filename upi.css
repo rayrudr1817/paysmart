@@ -1,0 +1,262 @@
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f4f6ff;
+  color: #0d47ff;
+}
+
+header {
+  background: #0d47ff;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo a {
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+nav a {
+  color: #dbe6ff;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a.active, nav a:hover {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 50px;
+  background: white;
+  border-radius: 20px;
+  margin: 40px auto 30px auto;
+  max-width: 1200px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  gap: 30px;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  min-width: 300px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #0d47ff;
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.hero-img {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.payment-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.card {
+  background: white;
+  width: 380px;
+  min-height: 420px;
+  padding: 35px 25px;
+  border-radius: 20px;
+  box-shadow: 0 14px 32px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+  color: #003b8e;
+  margin-bottom: 20px;
+}
+
+.card form {
+  text-align: left;
+}
+
+.card label {
+  font-weight: 600;
+  margin-top: 12px;
+  display: block;
+}
+
+.card input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 5px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.card button {
+  width: 100%;
+  padding: 16px;
+  background: #0d47ff;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.card button:hover {
+  background: #003b8e;
+  transform: translateY(-2px);
+}
+
+.qr-code {
+  width: 200px;
+  margin: 20px 0;
+  border-radius: 12px;
+}
+
+.upi-balance-card {
+  width: 280px;
+  height: 200px;
+  margin-top: 100px;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.upi-balance-card h3 {
+  margin: 0;
+  color: #0d47ff;
+}
+
+.upi-balance-amount {
+  font-size: 28px;
+  font-weight: 700;
+  color: #003b8e;
+  margin-top: 5px;
+}
+
+.upi-msg {
+  color: red;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.add-balance-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #0d47ff;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.success-popup {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4caf50;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  z-index: 999;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: opacity 0.3s ease;
+}
+
+.checkmark {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 5px solid white;
+  position: relative;
+  margin: 0 auto 20px;
+}
+
+.checkmark::after {
+  content: '';
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  width: 14px;
+  height: 28px;
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+  transform: rotate(45deg);
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #003b8e;
+  color: white;
+  margin-top: 60px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;
+    padding: 40px 20px;
+  }
+
+  .hero-text, .hero-img {
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-img img {
+    max-width: 300px;
+  }
+}
